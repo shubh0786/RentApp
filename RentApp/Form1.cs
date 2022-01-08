@@ -17,6 +17,19 @@ namespace RentApp
             InitializeComponent();
         }
 
-     
+        private void submitbtn_Click(object sender, EventArgs e)
+        {
+            string customerName = customerNameBox.Text;
+            string dateRented = datePickerRNT.Value.ToString();
+            string dateReturbed = datePickerRTN.Value.ToString();
+
+            var carType = sltcarBox.SelectedItem.ToString();
+
+
+            MessageBox.Show($"Customer Name: {customerName}\n\r" +
+                $"Date of Renting{dateRented}\n\r" + $"Date of returning{dateReturbed}\n\r" + $"You choosed {carType}\n\r"
+
+                + $"Thanks For selecting our services");
+        }
     }
 }

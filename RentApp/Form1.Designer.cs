@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.label1 = new System.Windows.Forms.Label();
             this.customerNameBox = new System.Windows.Forms.TextBox();
             this.cstLbl = new System.Windows.Forms.Label();
@@ -38,6 +39,8 @@
             this.sltcarBox = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.submitbtn = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -49,7 +52,6 @@
             this.label1.Size = new System.Drawing.Size(194, 47);
             this.label1.TabIndex = 0;
             this.label1.Text = "Rental App";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // customerNameBox
             // 
@@ -68,7 +70,6 @@
             this.cstLbl.Size = new System.Drawing.Size(167, 25);
             this.cstLbl.TabIndex = 2;
             this.cstLbl.Text = "Customer Name";
-            this.cstLbl.Click += new System.EventHandler(this.label2_Click);
             // 
             // datePickerRNT
             // 
@@ -127,7 +128,6 @@
             this.label5.Size = new System.Drawing.Size(131, 25);
             this.label5.TabIndex = 8;
             this.label5.Text = "Type Of Car";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // submitbtn
             // 
@@ -143,12 +143,24 @@
             this.submitbtn.TabIndex = 9;
             this.submitbtn.Text = "Submit";
             this.submitbtn.UseVisualStyleBackColor = true;
+            this.submitbtn.Click += new System.EventHandler(this.submitbtn_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(536, 36);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(221, 169);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 10;
+            this.pictureBox1.TabStop = false;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.submitbtn);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.sltcarBox);
@@ -161,6 +173,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Form1";
             this.Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -178,6 +191,7 @@
         private System.Windows.Forms.ComboBox sltcarBox;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button submitbtn;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 
