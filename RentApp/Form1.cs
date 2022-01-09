@@ -20,8 +20,9 @@ namespace RentApp
         private void submitbtn_Click(object sender, EventArgs e)
         {
             string customerName = customerNameBox.Text;
-            string dateRented = datePickerRNT.Value.ToString();
-            string dateReturbed = datePickerRTN.Value.ToString();
+
+            var dateRented = datePickerRNT.Value;
+            var dateReturned = datePickerRTN.Value;
 
             double cost = Convert.ToDouble(tbcost.Text);
 
@@ -33,9 +34,15 @@ namespace RentApp
 
             }
 
+            if (dateRented > dateReturned)
+            {
+
+                MessageBox.Show("Unappopriate Selection of time Please select valid inputs");
+
+            }
 
             MessageBox.Show($"Customer Name: {customerName}\n\r" +
-                $"Date of Renting{dateRented}\n\r" + $"Date of returning{dateReturbed}\n\r" + $"You choosed {carType}\n\r"
+                $"Date of Renting{dateRented}\n\r" + $"Date of returning{dateReturned}\n\r" + $"You choosed {carType}\n\r"
 
                 + $"Thanks For selecting our services");
         }
