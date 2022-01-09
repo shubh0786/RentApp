@@ -23,13 +23,17 @@ namespace RentApp
             string dateRented = datePickerRNT.Value.ToString();
             string dateReturbed = datePickerRTN.Value.ToString();
 
+            double cost = Convert.ToDouble(tbcost.Text);
+
             var carType = sltcarBox.SelectedItem.ToString();
 
-
+            
             MessageBox.Show($"Customer Name: {customerName}\n\r" +
                 $"Date of Renting{dateRented}\n\r" + $"Date of returning{dateReturbed}\n\r" + $"You choosed {carType}\n\r"
 
                 + $"Thanks For selecting our services");
         }
+
+       
     }
 }

@@ -40,6 +40,8 @@
             this.label5 = new System.Windows.Forms.Label();
             this.submitbtn = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.tbcost = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -148,18 +150,39 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(536, 36);
+            this.pictureBox1.Location = new System.Drawing.Point(23, 9);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(221, 169);
+            this.pictureBox1.Size = new System.Drawing.Size(103, 94);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 10;
             this.pictureBox1.TabStop = false;
+            // 
+            // tbcost
+            // 
+            this.tbcost.Location = new System.Drawing.Point(478, 151);
+            this.tbcost.Multiline = true;
+            this.tbcost.Name = "tbcost";
+            this.tbcost.Size = new System.Drawing.Size(292, 54);
+            this.tbcost.TabIndex = 11;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(473, 111);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(57, 25);
+            this.label2.TabIndex = 12;
+            this.label2.Text = "Cost";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.tbcost);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.submitbtn);
             this.Controls.Add(this.label5);
@@ -192,6 +215,8 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button submitbtn;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.TextBox tbcost;
+        private System.Windows.Forms.Label label2;
     }
 }
 
