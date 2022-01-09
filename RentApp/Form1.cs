@@ -27,7 +27,13 @@ namespace RentApp
 
             var carType = sltcarBox.SelectedItem.ToString();
 
-            
+            if (string.IsNullOrWhiteSpace(customerName)|| string.IsNullOrWhiteSpace(carType))
+            {
+                MessageBox.Show("Please Fill Required Fields");
+
+            }
+
+
             MessageBox.Show($"Customer Name: {customerName}\n\r" +
                 $"Date of Renting{dateRented}\n\r" + $"Date of returning{dateReturbed}\n\r" + $"You choosed {carType}\n\r"
 
